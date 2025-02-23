@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Luke from "../assets/luke.png";
+---
+
+<section class="min-h-screen grid grid-cols-2 py-32 px-28">
+    <div id="hero_text">
+        <h1>Become a<br />Social Leader</h1>
+        <p>Start living the life that<br />you truly desire</p>
+        <button id="hero_button">Know how</button>
+    </div>
+    <div id="hero_image">
+        <Image src={Luke} alt="Luke Photos" />
+    </div>
+</section>

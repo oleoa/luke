@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@theme {
+    --color-background-start: #f1ab66;
+    --color-background-end: #f19131;
+    --color-button: #384460;
+    --color-button-hover: #6d7fa8;
+}
+
+body {
+    @apply text-white bg-gradient-to-tr from-background-start to-background-end;
+}
+
+h1 {
+    @apply text-6xl font-bold;
+}
+
+p {
+    @apply text-2xl;
+}
+
+button {
+    @apply px-4 py-3 rounded-xl bg-button hover:bg-button-hover cursor-pointer w-fit transition duration-150;
+}
+
+#hero_text {
+    @apply flex flex-col gap-8 pr-20;
+}
+
+#hero_image {
+    @apply w-full h-full flex justify-center items-start;
+}
