@@ -12,21 +12,18 @@ body {
 }
 
 h1 {
-    @apply text-6xl font-bold;
+    @apply text-7xl font-bold;
+}
+
+h2 {
+    @apply text-5xl font-bold;
 }
 
 p {
-    @apply text-2xl;
+    @apply text-3xl;
 }
 
-button {
+button,
+.btn {
     @apply px-4 py-3 rounded-xl bg-button hover:bg-button-hover cursor-pointer w-fit transition duration-150;
-}
-
-#hero_text {
-    @apply flex flex-col gap-8 pr-20;
-}
-
-#hero_image {
-    @apply w-full h-full flex justify-center items-start;
 }

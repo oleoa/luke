@@ -3,13 +3,25 @@ import { Image } from "astro:assets";
 import Luke from "../assets/luke.png";
 ---
 
-<section class="min-h-screen grid grid-cols-2 py-32 px-28">
-    <div id="hero_text">
-        <h1>Become a<br />Social Leader</h1>
+<section class="min-h-screen grid grid-cols-2">
+    <div class="flex flex-col gap-10 pr-20">
+        <h1 class="text-nowrap">Become a<br />Social Leader</h1>
         <p>Start living the life that<br />you truly desire</p>
         <button id="hero_button">Know how</button>
     </div>
-    <div id="hero_image">
+    <div class="w-full h-full flex justify-center items-start">
         <Image src={Luke} alt="Luke Photos" />
     </div>
 </section>
+
+<script>
+    let hero_button = document.getElementById("hero_button");
+    let second_section = document.getElementById("callout");
+    if (hero_button)
+        hero_button.addEventListener("click", () => {
+            if (second_section)
+                second_section.scrollIntoView({
+                    behavior: "smooth",
+                });
+        });
+</script>
